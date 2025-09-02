@@ -58,11 +58,33 @@ console.log("Hello",firstName.concat(lastName));
 let intro =`this person's name is: ${firstName+" "+lastName}`
 console.log(intro)
 console.log(firstName=="dvjh"?"Amanpreet":"Satinder")
-*/
 
+var array=[];
 for(i=1;i<=10;i++){
     for(j=1;j<=10;j++){
-        console.log(i*j)
+        array.push(i*j);
     }
+    console.log(array);
+    array=[];
     
 }
+//console.log(array);
+
+
+var cubes = 'ABCDEFG';
+//styling console output using CSS with a %c format specifier
+for (var i = 0; i < cubes.length; i++) {
+    var styles = "font-size: 40px; border-radius: 10px; border: 1px solid blue; background: pink; color: purple";
+    console.log("%c" + cubes[i], styles)
+}
+
+*/
+
+
+function example(i) {
+  return i<10 ? "i is less than 10"
+    : i<20 ? "i is less than 20"
+    : i<30 ? "i is less than 30"
+    : "i is out of range";
+}
+console.log(example(5));

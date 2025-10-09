@@ -1,22 +1,23 @@
 
-@media (min-width: 393px){
+@media (max-width: 393px){
     html{
-        height: 100%;
         margin: 0;
         padding: 0;
     }
     body{
         background-color: #e4e4e4;
-        display: inline-grid;
-        min-height: 100%;
-        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        
+        
     }
     header{
+        order: 1;
         background-color: #ffaa44;
         display: inline-grid;
         padding: 1rem;
-        grid-template-columns: repeat(2,50%);
-        grid-auto-flow: row;
+        align-items: flex-start;
     }
     nav{
         
@@ -29,41 +30,50 @@
         
     }
     main{
+        order: 2;
         display: grid;
-        margin: 1rem;
-        
+        padding: 0.5rem;
+            
     }
     footer{
+        order: 3;
         background-color: #ffaa44;   
         display: flex;
-        align-items: center;
+        align-items: flex-end;
     }
-    ul{
-        flex-direction: column;
-    }
-
+    
     li{
         text-decoration: none;
         list-style: none;
     }
-    .signup{
-        display: inline-grid;
-        grid-auto-rows: 16%;
-    }   
-    .signup label{
-        padding: 0.5rem;
-    }     
-}
-fieldset{
-    margin: 1rem;
+    
+    form{
+        display: flex;
+        flex-direction: column;
+        background-color: skyblue;
+        flex-wrap: wrap;
+        align-items: center;
+        max-width: fit-content;
+    }
+    form label{
+        align-self: flex-start;
+        
+    }
+    form input{
+        max-height: 2rem;
+        
+        
+    }
+    .logoImg{
+        max-height: 4rem;
+        max-width: 6rem;
+    }
+
 }
 
-
-.logoImg{
-    max-height: 80px;
-    max-width: 80px;
-    display: inline;
-}
 button{
-    display: block;
+    margin: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;    
+    
 }

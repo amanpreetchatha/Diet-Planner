@@ -1,41 +1,61 @@
-html{
-    height: 100%;
-}
-body{
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    min-height: 100%;
-}
-header{
-    background-color: #6dcaf5;
-    align-items: center;
-    display: flex;
-}
-nav{
-    margin-left: auto;
-    align-self: flex-end;
-}
-a{
-    text-decoration: none;
-    margin: 1rem;
-    
-}
-main{
-    flex: 1 0 auto;
-    
-}
-footer{
-    background-color: #6dcaf5;
-    
-}
-ul{
-    
-}
-@media (min-width: 800px){
+
+@media (min-width: 393px){
+    html{
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
     body{
+        background-color: #e4e4e4;
+        display: inline-grid;
+        min-height: 100%;
+        max-width: 100%;
+    }
+    header{
+        background-color: #ffaa44;
+        display: inline-grid;
+        padding: 1rem;
+        grid-template-columns: repeat(2,50%);
+        grid-auto-flow: row;
+    }
+    nav{
+        
         
     }
+    a{
+        text-decoration: none;
+        margin-left: 0.25rem;
+        margin-right: 0.25rem;
+        
+    }
+    main{
+        display: grid;
+        margin: 1rem;
+        
+    }
+    footer{
+        background-color: #ffaa44;   
+        display: flex;
+        align-items: center;
+    }
+    ul{
+        flex-direction: column;
+    }
+
+    li{
+        text-decoration: none;
+        list-style: none;
+    }
+    .signup{
+        display: inline-grid;
+        grid-auto-rows: 16%;
+    }   
+    .signup label{
+        padding: 0.5rem;
+    }     
+}
+fieldset{
+    margin: 1rem;
 }
 
 

@@ -8,34 +8,20 @@
         background-color: #e4e4e4;
         display: flex;
         flex-direction: column;
-        flex-wrap: wrap;
-        
-        
+        flex-wrap: wrap;        
     }
+
     header{
         order: 1;
         background-color: #ffaa44;
-        display: flex;
-        padding: 1rem;
-        align-items: center;
-        justify-content: flex-start;
-    }
-    nav{
-        align-self: flex-end;
-        
+        display: grid;
+        gap: 1rem;
+        grid-template-areas: 'logo name' 'links links';
     }
     a{
         text-decoration: none;
-        margin-left: 0.25rem;
-        margin-right: 0.25rem;
         
-    }
-    footer{
-        order: 3;
-        background-color: #ffaa44;   
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
+        
     }
     li{
         text-decoration: none;
@@ -87,7 +73,6 @@
 @media (min-width: 394px){
     main{
         order: 2;
-        padding: 0.5rem;        
         background-color: yellow;
         display: grid;
         gap: 1rem;
@@ -117,11 +102,42 @@
 
 
 
-.logoImg{
-    max-height: 4rem;
-    max-width: 6rem;
+header{
+    order: 1;
+    background-color: #ffaa44;
+    display: grid;
+    gap: 1rem;
+    grid-template-areas: 'logo name name name' 'links';
+}
+.header_item{
+    display: flex;
+    align-items: center;
+    
+}
+footer{
+    order: 3;
+    background-color: #ffaa44;   
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+nav a{
+    margin: 0 2rem;
+    align-self: flex-start;
 }
 
+.logoImg{
+    max-height: 8rem;
+    max-width: 16rem;
+    padding: 1rem;
+    grid-area: logo;
+}
+.app_name{
+    grid-area: name;
+}
+.nav_links{
+    grid-area: links;
+}
 button{
     margin: 1rem;
     padding: 0.5rem;

@@ -34,6 +34,45 @@ a{
     text-decoration: none;
     margin: 1rem;
     
+    form{
+        display: flex;
+        flex-direction: column;
+        background-color: skyblue;
+        flex-wrap: wrap;
+        align-items: center;
+        max-width: fit-content;
+    }
+    form label{
+        align-self: flex-start;
+        
+    }
+    form input{
+        max-height: 2rem;
+        
+        
+    }
+    main{
+        order: 2;
+        background-color: green;
+        display: grid;
+        gap: 0.5rem;
+        grid-template-columns: 100%;
+        grid-template-rows: 5rem;
+        grid-auto-flow: row;
+        grid-auto-columns: 100%;
+        grid-auto-rows: 5rem;
+        
+    }
+    .daily_food{
+        grid-row: 1/5;
+    }
+    .body_measurements{
+        grid-row: 5/10;
+    }
+    .exercise_data{
+        grid-row: 10/15;
+    }
+
 }
 main{
     grid-area: main;
@@ -45,21 +84,32 @@ footer{
     background-color: #6dcaf5;
     
 }
-ul{
-    
+nav a{
+    margin: 0 2rem;
+    align-self: flex-start;
 }
-@media (min-width: 800px){
-    body{
-        
-    }
-}
-
 
 .logoImg{
-    max-height: 80px;
-    max-width: 80px;
-    display: inline;
+    max-height: 8rem;
+    max-width: 16rem;
+    padding: 1rem;
+    grid-area: logo;
+}
+.app_name{
+    grid-area: name;
+}
+.nav_links{
+    grid-area: links;
 }
 button{
-    display: block;
+    margin: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;    
+    
+}
+.main_grid_item{
+    border: solid black 1px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
 }

@@ -3,9 +3,13 @@ html{
 }
 body{
     min-height: 100%;
+    
+    margin: 0;
+    padding: 0;
 }
 .container{
-    padding: 2rem;
+    margin: 0;
+    padding: 0;
     display: grid;
     max-width: 100%;
     min-height: 100vh;
@@ -13,9 +17,7 @@ body{
     grid-template-rows: "auto auto 1fr auto";
     grid-template-areas: "header" "left" "main" "footer";
 }
-@media (min-width: 440px){
-    
-}
+
 header{
     grid-area: header;
     background-color: #6dcaf5;
@@ -33,7 +35,7 @@ aside{
 a{
     text-decoration: none;
     margin: 1rem;
-    
+}
     form{
         display: flex;
         flex-direction: column;
@@ -80,8 +82,12 @@ main{
     
 }
 footer{
+    display: flex;
+    flex-direction: column;
     grid-area: footer;
     background-color: #6dcaf5;
+    align-items: center;
+    justify-content: space-evenly;
     
 }
 nav a{
@@ -113,3 +119,4 @@ button{
     align-items: center;
     justify-content: center;
 }
+
